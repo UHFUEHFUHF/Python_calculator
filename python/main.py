@@ -11,11 +11,12 @@ class Calculator:
     
     def divide(self, a , b):
         try:
-            c = a / b
-            if(b == 0):
-                print("You can't divide a number with zero")
-            else:
+            
+            if(b != 0):
+                c = a / b
                 return c
+            else:
+                print("You can't divide the number by zero !")
         except ValueError:
             print("Please Enter a right digit")
 
@@ -25,6 +26,7 @@ while True:
     try:
         x = float(input("Enter the first value: "))
         y = input("Enter the operator :")
+
         z = float(input("Enter the seconnd value :"))
         if(y == "+" ):
             result = b1.add(x,z)
